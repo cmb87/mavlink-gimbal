@@ -1,7 +1,6 @@
 include <Getriebe.scad>
 
 
-hohlrad(modul=1, zahnzahl=31, breite=5, randbreite=1, eingriffswinkel = 20, schraegungswinkel = 0);
 ///////////////////////////
 //Bearing Size Parameters//
 ///////////////////////////
@@ -149,28 +148,9 @@ translate([-100,0,-20])
 cube([200,50,40]);
 }
 
-if (Show_Profile ==1){
-	if (Show_Inside ==1){
-	difference(){
-	inner_part();
-	cuber();
-	}
-}
 
-	if (Show_Outside == 1){
-	difference(){
-	outer_part();
-	cuber();
-	}
-}
-} else {
-	if (Show_Inside ==1){
-	inner_part();
-}
-	if (Show_Outside == 1){
-	outer_part();
-}
-}
+
+
 
 //screw_holes(20);
 //showit();
